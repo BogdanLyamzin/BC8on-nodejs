@@ -2,4 +2,5 @@
 package-lock.json
 yarn.lock
 yarn.log
+config.js
 node_modules/

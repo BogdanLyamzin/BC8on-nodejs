@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const DB_HOST = "mongodb+srv://Bogdan:pBje6ZbFRATcsTq@cluster0.ubani.mongodb.net/online_shop?retryWrites=true&w=majority"
+const {DB_HOST} = require("./config");
 
 mongoose.connect(DB_HOST, {
     useNewUrlParser: true,
