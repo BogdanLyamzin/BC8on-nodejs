@@ -5,6 +5,7 @@ require("dotenv").config();
 
 const {sendResponse} = require("./helpers");
 const authRouter = require("./routes/api/auth");
+const ordersRouter = require("./routes/api/orders");
 
 const app = express();
 
@@ -12,6 +13,7 @@ app.use(cors());
 app.use(express.json());
 // /api/v1/ath/register
 app.use("/api/v1/auth", authRouter);
+app.use("/api/v1/orders", ordersRouter);
 
 app.use((_, res)=> {
     sendResponse({res, status: 404, statusMessage: "error", data: {message: "Not found"}});
